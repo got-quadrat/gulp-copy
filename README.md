@@ -18,6 +18,13 @@ var otherGulpFunction = require('gulp-other-function');
 var sourceFiles = [ 'source1/*', 'source2/*.txt' ];
 var destination = 'dest/';
 
+// or
+
+var destination = {
+	'src1/**/*.ext': 'dest1/',
+	'src2/**/*.ext': 'dest2/'
+};
+
 return gulp
     .src(sourceFiles)
     .pipe(gulpCopy(outputPath, options))
